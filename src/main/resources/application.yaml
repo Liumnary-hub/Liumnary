@@ -1,0 +1,41 @@
+server:
+  port: 8088
+spring:
+  mail:
+    host: smtp.qq.com
+    protocol: smtp
+    default-encoding: UTF-8
+    #发件人
+    username: abc1234511@qq.com
+    #授权码
+    password: ps234234112312
+    port: 465
+    properties:
+      mail:
+        debug: true
+        smtp:
+          ssl:
+            enable: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cangku?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: true
+logging:
+  level:
+    root: info
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password: 123321
+  lettuce:
+    pool:
+      max-active: 10
+      max-idle: 10
+      min-idle: 1
+      time-between-eviction-runs: 10s
